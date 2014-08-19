@@ -5,7 +5,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="Cabecera">Página:</string>
-    <string name="Url">www.losvinosdejerez.com/fino</string>
+    <string name="Url">www.losvinosdejerez.com</string>
     <string name="Url2">www.pgl8.tk</string>
+    <string name="boton1">Fino</string>
+    <string name="boton2">Manzanilla</string>
 
 </resources>

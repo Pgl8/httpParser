@@ -3,8 +3,11 @@ package com.pgl8.httpparser;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.apache.http.HttpResponse;
@@ -52,11 +55,15 @@ public class Principal extends Activity {
 
     //Necesita ser una tarea asíncrona
     //Haremos una clase interna para ello
-           class obtenerHTML extends AsyncTask<String, Void, String> {
+        class obtenerHTML extends AsyncTask<String, Void, String> {
             private int cont=0;
+            private static final String TAG = "Principal";
 
             @Override
             protected String doInBackground(String... params) {
+                //Log.v(TAG, control);
+
+                Log.v(TAG, "SI");
                 HttpClient client = new DefaultHttpClient();
                 HttpGet request = new HttpGet("http://www.losvinosdejerez.com/productos.php?id=12");
 
@@ -69,8 +76,8 @@ public class Principal extends Activity {
                     String line;
 
                     while ((line = reader.readLine()) != null) {
-                        if(cont==688 || cont==690 || cont==691 || cont==692 || cont==693 ||
-                           cont==694 || cont==701 || cont==703) {
+                        if (cont == 688 || cont == 690 || cont == 691 || cont == 692 || cont == 693 ||
+                                cont == 694 || cont == 701 || cont == 703) {
                             str.append(line);//.replace("<br />", "\n\n"));
                         }
                         cont++;
@@ -78,13 +85,13 @@ public class Principal extends Activity {
 
                     in.close();
                     html = str.toString();
-
                     return html;
 
-                }catch (IOException e) {
+                } catch (IOException e) {
                     e.printStackTrace();
                     return null;
                 }
+
             }
 
             @Override
