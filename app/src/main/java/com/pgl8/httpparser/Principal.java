@@ -93,7 +93,7 @@ public class Principal extends Activity {
                     //Quitamos etiquetas HTML en el resultado
                     String resultado = android.text.Html.fromHtml(result).toString();
 
-                    //Cambiamos el TextView para el texto de salidaaaa
+                    //Cambiamos el TextView para el texto de salida
                     TextView txt = (TextView) findViewById(R.id.textView3);
                     txt.setText(resultado);
                 }
