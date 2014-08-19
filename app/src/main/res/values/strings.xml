@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Http Parser</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Cabecera">Página:</string>
+    <string name="Url">www.losvinosdejerez.com/fino</string>
+    <string name="Url2">www.pgl8.tk</string>
+
+</resources>
